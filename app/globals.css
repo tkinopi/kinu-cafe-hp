@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+:root {
+  --bg: #F4EFE6;
+  --bg2: #EDE7DA;
+  --accent: #B5674B;
+  --accent2: #9A5439;
+  --text: #2C2015;
+  --text-muted: #7A6550;
+  --border: #D8CFC0;
+  --card: #FDFAF6;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── レイアウトクラス（必須） ── */
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.grid-2-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.main-pad {
+  padding: 0 40px 80px;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+.hero-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.section-title {
+  font-size: 28px;
+}
+
+/* ── タブレット（≤900px） ── */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+/* ── モバイル（≤640px）── */
+@media (max-width: 640px) {
+  .site-header-inner {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0 0;
+  }
+
+  .site-nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .site-nav button {
+    flex-shrink: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-deco {
+    display: none;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .grid-2-menu {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-pad {
+    padding: 0 16px 60px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+  .hero-pad {
+    padding: 40px 24px !important;
+  }
+}
