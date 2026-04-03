@@ -203,7 +203,9 @@ function TopSection({ setActiveTab }: { setActiveTab: (tab: Tab) => void }) {
       </section>
     </div>
   )
-}'0.25em', marginBottom: '12px', textAlign: 'center' }}>MENU</p>
+}'0.25em', margieturn (
+    <div className="main-pad" style={{ paddingTop: '60px' }}>
+      <p className="hero-en" style={{ fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.25em', marginBottom: '12px', textAlign: 'center' }}>MENU</p>
       <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '8px', fontWeight: 900 }}>メニュー</h2>
       <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '13px', marginBottom: '56px' }}>
         ※価格は税込。季節により変わる場合があります。
@@ -246,7 +248,7 @@ function TopSection({ setActiveTab }: { setActiveTab: (tab: Tab) => void }) {
           </div>
           <div className="grid-2-menu">
             {[
-              { name: 'ホットサンド', price: '¥600', note: '人気No.1。ふわっとし�食感のモーニング定番' },
+              { name: 'ホットサンド', price: '¥600', note: '人気No.1。ふわっとした食感のモーニング定番' },
               { name: 'モーニングセット', price: '¥750', note: 'ホットサンド＋コーヒーのお得セット' },
               { name: 'ヨーグルト', price: '¥350', note: '毎朝手作り。フルーツ付き' },
               { name: '日替わり小鉢', price: '¥300', note: '旬の食材を使った手作り小鉢' },
@@ -266,8 +268,8 @@ function TopSection({ setActiveTab }: { setActiveTab: (tab: Tab) => void }) {
         <div style={{ background: 'var(--card)', border: '1px solid var(--border)', padding: '32px 28px' }}>
           <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px', letterSpacing: '0.08em' }}>☕ コーヒー豆の販売</h3>
           <p style={{ fontSize: '13px', lineHeight: 1.9, color: 'var(--text-muted)' }}>
-            店内で焙煎し�珈琲豆をお持ち帰り用にご用意しています。
-            ご自宅で楽し　ためは最適な焙煎度合いをご提案します。100g ¥700〜(縮朚に�って喵業市なります)
+            店内で焙煎した珈琲豆をお持ち帰り用にご用意しています。
+            ご自宅で楽しむための最適な焙煎度合いをご提案します。100g ¥700〜（種類によって異なります）
           </p>
         </div>
       </div>
@@ -281,7 +283,7 @@ function InfoSection() {
     { day: '火曜日', time: '7:00〜17:00', closed: false },
     { day: '水曜日', time: '7:00〜17:00', closed: false },
     { day: '木曜日', time: '定休日', closed: true },
-    { day: '金雜日', time: '7:00〜17:00', closed: false },
+    { day: '金曜日', time: '7:00〜17:00', closed: false },
     { day: '土曜日', time: '7:00〜17:00', closed: false },
     { day: '日曜日', time: '7:00〜17:00', closed: false },
   ]
@@ -289,37 +291,144 @@ function InfoSection() {
   return (
     <div className="main-pad" style={{ paddingTop: '60px' }}>
       <p className="hero-en" style={{ fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.25em', marginBottom: '12px', textAlign: 'center' }}>ACCESS</p>
-      <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '48px', fontWeight: 900 }}>店�"%���yh,x���ਸ�����O�����]��\�Ә[YOH�ܚYL����]���]��[O^���X��ܛ�[��	ݘ\�KX�\�
-I��ܙ\��	�\��Y�\�KX�ܙ\�I�Y[�Έ	�̜	�_O����[O^���۝�^�N�	�M�	��۝�ZY��
-�X\��[����N�	̍	�]\��X�[�Έ	��
-Y[I��ܙ\����N�	�\��Y�\�KX�ܙ\�I�Y[�Л��N�	�L�	�_O�g+9��yh,O�ς���X�[�	�n��d#I��[YN�	��cx�k8����x���K��X�[�	�/c��`	��[YN�	��$���N�L��.�:`�yn�9.�:`�yn �."�.�9c.�l�ylaybcy�.�����$�LI�K��X�[�	�� 9k�8ࢸ�x��x�����	��[YN�	�c%�a�i*y��9k��9o���jy�!
-yb!��."�. �.�9o���jy�!�b!��K��X�[�	�Ӕ���[YN�	�[��Yܘ[N��[�X�Y�{�":*l��,8�k��'9�(��"I�K��X�[�	��8��8��8�8�����[YN�	��`�ࢻ�"8��੸�������8�������8�����n+{�"I�K��X�[�	��������	��[YN�	�n��"%�bcx�k�i%�n+x�k��e9��:*��c���K�K�X\
+      <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '48px', fontWeight: 900 }}>店舗情報・アクセス</h2>
 
-[���JHO�
-�]��^O^�_H�[O^��\�^N�	ٛ^	��\�	�M�	�X\��[����N�	�M�	��^ܘ\�	�ܘ\	�_O���[��[O]^��۝�^�N�	�L�	���܎�	ݘ\�KXX��[�
-I�]\��X�[�Έ	��[I�Z[��Y�	�	��^��[�Έ_O��[��˛X�[O��[����[��[O^���۝�^�N�	�L�	�[�RZY��K���]T�X�N�	��K[[�I���܎�	ݘ\�K]^
-I�_O��[��˝�[Y_O��[����]���
-J_B��]����]����]���]��[O^���X��ܛ�[��	ݘ\�KX�\�
-I��ܙ\��	�\��Y�\�KX�ܙ\�I�Y[�Έ	�̜	�_O����[O^���۝�^�N�	�M�	��۝�ZY��
-�X\��[����N�	̍	�]\��X�[�Έ	��
-Y[I��ܙ\����N�	�\��Y�\�KX�ܙ\�I�Y[�Л��N�	�L�	�_O�e���ky�`�e���ς���\�˛X\
+      <div className="grid-2">
+        <div>
+          <div style={{ background: 'var(--card)', border: '1px solid var(--border)', padding: '32px' }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '24px', letterSpacing: '0.05em', borderBottom: '1px solid var(--border)', paddingBottom: '12px' }}>基本情報</h3>
+            {[
+              { label: '店名', value: 'きぬカフェ' },
+              { label: '住所', value: '〒602-8393\n京都府京都市上京区鳥居前町666−11' },
+              { label: '最寄りスポット', value: '北野天満宮 徒歩約5分\n上七軒 徒歩約3分' },
+              { label: 'SNS', value: 'Instagram: @kinucafe（詳細は検索）' },
+              { label: 'イートイン', value: 'あり（カウンター・テーブル席）' },
+              { label: 'ペット', value: '店舗前の外席はご相談可' },
+            ].map((info, i) => (
+              <div key={i} style={{ display: 'flex', gap: '16px', marginBottom: '16px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.08em', minWidth: '88px', flexShrink: 0 }}>{info.label}</span>
+                <span style={{ fontSize: '13px', lineHeight: 1.6, whiteSpace: 'pre-line', color: 'var(--text)' }}>{info.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
-JHO�
-�]��^O^�_H�[O^��\�^N�	ٛ^	��\�Y�P�۝[��	��X�KX�]�Y[��Y[�Έ	�L	��ܙ\����N�	�\��Y�\�KX�ܙ\�I��^ܘ\�	�ܘ\	��\�	�	�_O���[��[O^���۝�^�N�	�L�	���܎�	ݘ\�K]^[]]Y
-I�_O���^_O��[����[��[O^���۝�^�N�	�L�	���܎�����Y�	ݘ\�KXX��[�
-I��	ݘ\�K]^
-I�_O���[Y_O��[����]���
-J_B��]����]��[O^��X\��[���	�M�	��X��ܛ�[��	ݘ\�KX�\�
-I��ܙ\��	�\��Y�\�KX�ܙ\�I�Y[�Έ	̍	�^[Yێ�	��[�\��_O���[O^���۝�^�N�	�L�	���܎�	ݘ\�K]^[]]Y
-I�X\��[����N�	�L�	�_O�����H8���������i�论*�O���B��Y�H�΋��X\˙����K���K�X\��Ox�cx�k8����x���.�:`�yn �."�.�9c.�l�ylaybcy�.���\��]H�؛[�Ȃ��[H����[�\��ܙY�\��\����[O^�\�^N�	�[�[�KX�������X��ܛ�[��	ݘ\�KXX��[�
-I����܎�	�ٙ����Y[�Έ	�L��	���۝�^�N�	�L�	��^X�ܘ][ێ�	ۛۙI��]\��X�[�Έ	��
-Y[I���]T�X�N�	ۛ�ܘ\	��_B���9g,9f���i�)����O���]����]�����ʈX��\����\�
-��B�]��[O^��X\��[���	�̜	�X^�Y�	�
-�	��X��ܛ�[��	ݘ\�KX�\�
-I��ܙ\��	�\��Y�\�KX�ܙ\�I�Y[�Έ	̎̜	�_O����[O^���۝�^�N�	�M	��۝�ZY��
-�X\��[����N�	�L�	���܎�	ݘ\�KXX��[�
-I�_O�ਸ�����x�j��i8�a8�i��ς��[O^���۝�^�N�	�L�	�[�RZY��K�K��܎�	ݘ\�K]^[]]Y
-I�_O��:-��g,8�j�� y��8�e��g�c%x�i��cx�g�� z`'��e��i��k�a�x�k��g��x� ya&�a&�."��i��kx�cx�g�� ya�alx�j��k��e8�k���� ����b�࠸�dx�f��c��h8�ex�a8� ��9.�:`�yn�9.�:`�yn �."�.�9c.�l�ylaybcx�b�ࢹ."�. �.�k��/$y.�L�8�$�
-����k��" �ZJ~�
-~ZN8~8�8.���Z��[	.8�[�8�ZJ�8�8).8�[~8(.8N8�88�y�XX>8�8N8n8N8�8�8 ������F�c���F�c���Р�gV�7F���6��F7E6V7F��ₒ��&WGW&����F�b6�74��S�&����B"7G��S׷�FF��uF��sc�r����6�74��S�&�W&��V�"7G��S׷�f��E6��S�s'�r�6���#�wf"���66V�B�r��WGFW%76��s�s�#VV�r��&v��&�GF�Ӣs'�r�FW�DƖv�v6V�FW"r���4��D5C���ƃ"6�74��S�'6V7F����F�F�R"7G��S׷�FW�DƖv�v6V�FW"r��&v��&�GF�Ӣs'�r�f��EvV�v�C�����8�YX�8NY�8(�8����#��7G��S׷�FW�DƖv�v6V�FW"r�6���#�wf"���FW�B��WFVB�r�f��E6��S�s7�r��&v��&�GF�ӢsC��r���8NX��X��8�8�YX�8N{HN8�8Ny����~X��8���7Fw&�8�D�8�8�8�8�Z�Κ�>8�8N8n8�88Njx�8 ���ࠢ�F�b6�74��S�&6��F7B�w&�B"7G��S׷���v�GF��s��r��&v��sWF�r���������6��	�;rr��V�t��7Fw&�r��F�F�S�t��7Fw&�8~8.8����r��FW63�~i��j��8�Xi^Z��8�i�Z�8(.Z�>z�8~8N8�8�8.K��8�:H8�h�n8���7Fw&�8~9ٮ8(�[�~8��~8(�8n8N8�8�8$D��Ȏ888*N8:�8*�88�8:88>8;�8;�8+��Ȟ8~8�8N[�n8(N8(�8�8�8"r��7F���v�GG3���wwr��7Fw&��6���r���&Vât��7Fw&�8).���XX�r��������6��	��r��V�uvƲ֖�r��F�F�S�~����N8�iz^Z�8~8�88^8Br��FW63�~K��{HNK��X��8~8N�)�ZI�8(.8(.8(�8�8�8.X{�X[8�[	8�8N8�8(8���Z��[	.8�8�[{.8~8�88^8N8�8�8.8�ij�8>X��8�8(�8).8�88�8�8(.8).8�88^8N8�8�8"r��7F���v�GG3����2�v��v�R�6����3��X�~�x�ZJ�k�Z��[�"r���&Vâ~Y�Y�>8~8*.8*�8+�8+�z+����r����������2��������F�b�W�׶��7G��S׷�&6�w&�V�C�wf"���6&B�r�&�&FW#�s�6�ƖBf"���&�&FW"�r�FF��s�sC�#��r�FW�DƖv�v6V�FW"r����F�b7G��S׷�f��E6��S�sCG�r��&v��&�GF�Ӣs'�r���2�6�����F�c��6�74��S�&�W&��V�"7G��S׷�f��E6��S�s�r�6���#�wf"���66V�B�r��WGFW%76��s�s�&V�r��&v��&�GF�Ӣs�r���2�V�����ƃ27G��S׷�f��E6��S�sW�r�f��EvV�v�C�s��&v��&�GF�Ӣsg�r��WGFW%76��s�s�VV�r���2�F�F�W����3��7G��S׷�f��E6��S�s7�r�6���#�wf"���FW�B��WFVB�r�Ɩ�T�V�v�C����&v��&�GF�Ӣs#G�r���2�FW67�������&Vc׶2�7F���ТF&vWC�%�&�� �&V��&���V�W"��&VfW'&W" �7G��S׷��F�7���v��Ɩ�R�&��6�r��&6�w&�V�C�wf"���66V�B�r��6���#�r6ffbr��FF��s�s'�#��r��f��E6��S�s7�r��FW�DFV6�&F���v���Rr���WGFW%76��s�s�VV�r��v��FU76S�v��w&r���Т��2��&V�Т�����F�c���Т��F�cࠢ�F�b7G��S׷���v�GF��s��r��&v��s3'�WF�r�&6�w&�V�C�wf"���6&B�r�&�&FW#�s�6�ƖBf"���&�&FW"�r�FF��s�s#G�#��r���ƃ27G��S׷�f��E6��S�sG�r�f��EvV�v�C�s��&v��&�GF�Ӣs'�r�6���#�wf"���66V�B�r���YknjZ�8��j.8�8(�8Nk:�hH����3��V�7G��S׷�Ɨ7E7G��S�v���Rr�FF��s�������~iʎi��iz^8�Z�K�iz^8~8�8.YknjZ�i�.�i>8�s�8	�s�8�8�8(�8�8�8"r��~[��i[8�[	8�8N8�8(88+8:�8;�89~8~8�8Ni�^[�~8�K��X��8�8N�
->{Z8N8�888(�8�X��8�8(�8�8�8"r��~ZIΙi>8�YknjZ�8�K��{HNX�n8�8�8>8n8N8�8~�Ȏ��>{K8���7Fw&�8).8Nz+����8�88^8N�Ȓr���������FR��������ƒ�W�׶��7G��S׷�f��E6��S�s7�r�6���#�wf"���FW�B��WFVB�r�Ɩ�T�V�v�C��r��&v��&�GF�Ӣs��r�FF��t�VgC�sg�r��6�F���w&V�F�fRr����7�7G��S׷��6�F���v'6��WFRr��VgC��6���#�wf"���66V�B�r���+s��7�����FWТ��Ɠ���Т��V����F�c���F�c����
+        <div>
+          <div style={{ background: 'var(--card)', border: '1px solid var(--border)', padding: '32px' }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '24px', letterSpacing: '0.05em', borderBottom: '1px solid var(--border)', paddingBottom: '12px' }}>営業時間</h3>
+            {hours.map((h, i) => (
+              <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid var(--border)', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>{h.day}</span>
+                <span style={{ fontSize: '13px', color: h.closed ? 'var(--accent)' : 'var(--text)' }}>{h.time}</span>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: '16px', background: 'var(--card)', border: '1px solid var(--border)', padding: '24px', textAlign: 'center' }}>
+            <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '12px' }}>Google マップで確認</p>
+            <a
+              href="https://maps.google.com/maps?q=きぬカフェ+京都市上京区鳥居前町"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'var(--accent)',
+                color: '#fff',
+                padding: '12px 24px',
+                fontSize: '13px',
+                textDecoration: 'none',
+                letterSpacing: '0.05em',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              地図で見る
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Access Notes */}
+      <div style={{ marginTop: '32px', maxWidth: '860px', background: 'var(--card)', border: '1px solid var(--border)', padding: '28px 32px' }}>
+        <h3 style={{ fontSize: '14px', fontWeight: 700, marginBottom: '12px', color: 'var(--accent)' }}>アクセスについて</h3>
+        <p style={{ fontSize: '13px', lineHeight: 1.9, color: 'var(--text-muted)' }}>
+          路地に面した小さなお店のため、初めての方は少しわかりにくい場合があります。
+          北野天満宮の鳥居前から上七軒方面へ徒歩3〜5分。
+          観光帰りのお立ち寄りも大歓迎です。混雑時はお席をお待ちいただく場合がございます。
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function ContactSection() {
+  return (
+    <div className="main-pad" style={{ paddingTop: '60px' }}>
+      <p className="hero-en" style={{ fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.25em', marginBottom: '12px', textAlign: 'center' }}>CONTACT</p>
+      <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '12px', fontWeight: 900 }}>お問い合わせ</h2>
+      <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '13px', marginBottom: '48px' }}>
+        ご不明な点やご予約のご相談はInstagramのDMまたはお電話にてお気軽にどうぞ。
+      </p>
+
+      <div className="contact-grid" style={{ maxWidth: '800px', margin: '0 auto' }}>
+        {[
+          {
+            icon: '📷',
+            en: 'Instagram',
+            title: 'Instagramでご連絡',
+            desc: '普段の営業の様子や季節のメニューはInstagramで発信中。DM（ダイレクトメッセージ）でのご質問も承ります。',
+            action: 'https://www.instagram.com/',
+            label: 'Instagramを見る',
+          },
+          {
+            icon: '🏡',
+            en: 'Walk-in',
+            title: '直接お越しください',
+            desc: '予約不要でご来店いただけます。席数が少ないため、混雑時はお待ちいただく場合がございます。お気軽にどうぞ。',
+            action: 'https://maps.google.com/maps?q=きぬカフェ+京都市上京区鳥居前町',
+            label: '地図でアクセス確認',
+          },
+        ].map((c, i) => (
+          <div key={i} style={{ background: 'var(--card)', border: '1px solid var(--border)', padding: '40px 28px', textAlign: 'center' }}>
+            <div style={{ fontSize: '44px', marginBottom: '12px' }}>{c.icon}</div>
+            <p className="hero-en" style={{ fontSize: '11px', color: 'var(--accent)', letterSpacing: '0.2em', marginBottom: '10px' }}>{c.en}</p>
+            <h3 style={{ fontSize: '15px', fontWeight: 700, marginBottom: '16px', letterSpacing: '0.05em' }}>{c.title}</h3>
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.9, marginBottom: '24px' }}>{c.desc}</p>
+            <a
+              href={c.action}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'var(--accent)',
+                color: '#fff',
+                padding: '12px 28px',
+                fontSize: '13px',
+                textDecoration: 'none',
+                letterSpacing: '0.05em',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {c.label}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ maxWidth: '800px', margin: '32px auto 0', background: 'var(--card)', border: '1px solid var(--border)', padding: '24px 28px' }}>
+        <h3 style={{ fontSize: '14px', fontWeight: 700, marginBottom: '12px', color: 'var(--accent)' }}>営業に関するご注意</h3>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            '木曜日は定休日です。営業時間は7:00〜17:00となります。',
+            '席数が少ないため、グループでのご来店は事前にご連絡いただけると助かります。',
+            '夜間の営業は予約制となっています（詳細はInstagramをご確認ください）。',
+          ].map((note, i) => (
+            <li key={i} style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '8px', paddingLeft: '16px', position: 'relative' }}>
+              <span style={{ position: 'absolute', left: 0, color: 'var(--accent)' }}>·</span>
+              {note}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
